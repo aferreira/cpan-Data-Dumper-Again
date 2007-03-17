@@ -1,9 +1,9 @@
 --- #YAML:1.0
 name:                Data-Dumper-Again
-version:             0.0001
+version:             0.0002
 abstract:            An OO alter ego for Data::Dumper
 license:             perl
-generated_by:        ExtUtils::MakeMaker version 6.32
+generated_by:        ExtUtils::MakeMaker version 6.31
 distribution_type:   module
 requires:     
     Carp:                          0
@@ -17,4 +17,4 @@ author:
     - Adriano R. Ferreira <ferreira@cpan.org>
 recommends:
     Test::Pod:                     1.18
-    Test::Pod::Coverage:                    1.04
+    Test::Pod::Coverage:           1.04

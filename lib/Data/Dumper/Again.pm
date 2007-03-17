@@ -5,7 +5,9 @@ package Data::Dumper::Again;
 use strict;
 use warnings;
 
-our $VERSION = '0.0001';
+our $VERSION = '0.0002';
+
+# for docs, look for F<Again.pod>
 
 use Data::Dumper ();
 use Carp qw(carp croak);
@@ -15,18 +17,6 @@ __PACKAGE__->mk_accessors(qw(ddumper));
 
 # the instance variables
 #   ddumper - the Data::Dumper inner object
-
-=head1 SYNOPSIS
-
-    use Data::Dumper::Again;
-
-    $dumper = Data::Dumper::Again->new( purity => 1 );
-    $dumper->dump($scalar);
-    $dumper->dump(@list);
-
-    $dumper->dump_named( '$var' => $scalar, '*list' => \@list );
-
-=cut
 
 sub new {
     my $proto = shift;
