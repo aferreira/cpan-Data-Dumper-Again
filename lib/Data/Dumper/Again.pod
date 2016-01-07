@@ -15,7 +15,7 @@ Data::Dumper::Again - An OO alter ego for Data::Dumper
 
 =head1 DESCRIPTION
 
-This is meant to be a I<proper> OO interface to L<Data::Dumper>. 
+This is meant to be a I<proper> OO interface to L<Data::Dumper>.
 As any pretentious piece of code that starts with bold statements,
 that does not mean anyone else will think it is proper too.
 
@@ -24,7 +24,7 @@ like this:
 
 =over 4
 
-=item * 
+=item *
 
 create a dumper
 
@@ -38,7 +38,7 @@ use it to dump (possibly many values)
 
 =back
 
-And when I think something similar, the code that comes to mind 
+And when I think something similar, the code that comes to mind
 looks like:
 
     $dumper = Data::Dumper->new;
@@ -82,7 +82,7 @@ you may say
 =item 2.
 
 A C<dump> method that tests to see if the arguments looks like
-a single scalar or a list. So that 
+a single scalar or a list. So that
 
     $dumper->dump(1); # output looks like "$VAR1 = 1;"
     $dumper->dump(qw(a b)); # @VAR1 = ( 'a', 'b' );
@@ -91,7 +91,7 @@ a single scalar or a list. So that
 Obviously, the criterion for this is pretty stupid. If
 the argument list of the method has one element, dump it
 as a scalar. Otherwise, dump a list. This is basically
-what Gisle's C<Data::Dump> does. 
+what Gisle's C<Data::Dump> does.
 
 But what if I want to dump a one-element list? See below.
 
@@ -160,7 +160,7 @@ XXX
 
 Inside a C<Data::Dumper::Again> lives a C<Data::Dumper> object.
 This method returns the underlying beast. But just because
-it is here, it does not mean that it is such a good idea to 
+it is here, it does not mean that it is such a good idea to
 fuss around with this and expect that everything keeps
 working. Its purpose was to instrument the tests and to
 give you an opportunity to shoot at your feet. Don't use!
@@ -220,7 +220,7 @@ tell the truth.)
 
 Document that the L<Data::Dumper> configurable attributes, like
 C<Purity> or C<Terse>, are available via the interface of this class,
-with getter (get_*) and setter (set_*) methods. 
+with getter (get_*) and setter (set_*) methods.
 
 Write many more tests.
 
