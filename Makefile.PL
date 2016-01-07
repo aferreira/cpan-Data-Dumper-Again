@@ -11,8 +11,6 @@ WriteMakefile(
         Data::Dumper        => 0,
         Carp                => 0,
         Class::Accessor     => 0,
-
-        Test::More          => 0,
     },
     PL_FILES          => {},
     ($] >= 5.005 ? (
@@ -21,7 +19,28 @@ WriteMakefile(
     ) : ()),
     ($EUMM_VERSION >= 6.31 ? (
         LICENSE => 'perl', 
-        EXTRA_META => "recommends:\n    Test::Pod:                     1.18\n    Test::Pod::Coverage:           1.04\n",
-    ) :())
-
+    ) :()),
+    ($EUMM_VERSION > 6.4501 ? (
+        META_MERGE => {
+            'meta-spec' => { version => 2 },
+            resources => {
+                repository => {
+                    type => 'git',
+                    url => 'git://github.com/aferreira/cpan-Data-Dumper-Again.git',
+                    web => 'https://github.com/aferreira/cpan-Data-Dumper-Again',
+                }
+            },
+            prereqs => {
+                test => {
+		    requires => {
+                        'Test::More'          => 0,
+                    },
+		    recommends => {
+                        'Test::Pod'           => '1.18',
+                        'Test::Pod::Coverage' => '1.04',
+                    },
+                }
+            },
+        },
+    ) : ()),
 );
