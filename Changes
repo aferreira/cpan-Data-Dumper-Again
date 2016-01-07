@@ -1,5 +1,8 @@
 Revision history for Perl extension Data-Dumper-Again.
 
+0.01     Jan 6 2016
+        - Dist modernization
+
 0.0002   Fri Mar 16 2007
         - no real change
         - removed all POD in Again.pm; all docs

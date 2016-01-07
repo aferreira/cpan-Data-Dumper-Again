@@ -5,7 +5,7 @@ package Data::Dumper::Again;
 use strict;
 use warnings;
 
-our $VERSION = '0.0002';
+our $VERSION = '0.01';
 
 # for docs, look for F<Again.pod>
 
@@ -53,7 +53,7 @@ sub _varname {
     my $self = shift;
     my $wantarray = shift;
     my $varname = $self->ddumper->Varname;
-    return ( $wantarray ? '*' : '$' ) . $varname; 
+    return ( $wantarray ? '*' : '$' ) . $varname;
 }
 
 # $s = $self->_raw_dump(\@values, \@names);
